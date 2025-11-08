@@ -1,0 +1,60 @@
+Proceso Menu_Restaurante
+    Definir plato, bebida, metodoPago Como Caracter
+    Definir total, descuento, totalFinal Como Real
+
+    total <- 0
+
+    Escribir "Seleccione un plato (pasta, pollo, carne): "
+    Leer plato
+
+    Segun plato Hacer
+        "pasta":
+            total <- total + 15000
+        "pollo":
+            total <- total + 18000
+        "carne":
+            total <- total + 20000
+        De Otro Modo:
+            Escribir "Plato no válido."
+            FinSegun
+            FinProceso
+    FinSegun
+
+    Escribir "Seleccione una bebida (agua, gaseosa, jugo): "
+    Leer bebida
+
+    Segun bebida Hacer
+        "agua":
+            total <- total + 3000
+        "gaseosa":
+            total <- total + 4000
+        "jugo":
+            total <- total + 5000
+        De Otro Modo:
+            Escribir "Bebida no válida."
+            FinSegun
+            FinProceso
+    FinSegun
+
+    Escribir "Método de pago (efectivo, tarjeta, cheque): "
+    Leer metodoPago
+
+    Segun metodoPago Hacer
+        "efectivo":
+            descuento <- 0.10
+        "tarjeta":
+            descuento <- 0.05
+        "cheque":
+            descuento <- 0
+        De Otro Modo:
+            Escribir "Método de pago no válido."
+            FinSegun
+            FinProceso
+    FinSegun
+
+    totalFinal <- total - (total * descuento)
+
+    Escribir "Total sin descuento: $", total
+    Escribir "Descuento aplicado: ", descuento * 100, "%"
+    Escribir "Total a pagar: $", totalFinal
+FinProceso
