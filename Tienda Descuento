@@ -1,0 +1,37 @@
+Proceso Tienda_Descuento
+    Definir tipo Como Caracter
+    Definir cantidad Como Entero
+    Definir precioBase, totalSinDescuento, descuento, totalConDescuento Como Real
+
+    Escribir "Ingrese el tipo de producto (A - Alimentos, V - Vestimenta, E - Electrónicos): "
+    Leer tipo
+    Escribir "Ingrese la cantidad de unidades: "
+    Leer cantidad
+
+    Si cantidad <= 0 Entonces
+        Escribir "La cantidad debe ser un número positivo."
+    SiNo
+        Segun tipo Hacer
+            "A":
+                precioBase <- 5000
+                descuento <- 0.10
+            "V":
+                precioBase <- 10000
+                descuento <- 0.05
+            "E":
+                precioBase <- 20000
+                descuento <- 0
+            De Otro Modo:
+                Escribir "Tipo de producto no válido."
+                FinSegun
+                FinProceso
+        FinSegun
+
+        totalSinDescuento <- cantidad * precioBase
+        totalConDescuento <- totalSinDescuento - (totalSinDescuento * descuento)
+
+        Escribir "Costo sin descuento: $", totalSinDescuento
+        Escribir "Descuento aplicado: ", descuento * 100, "%"
+        Escribir "Costo total con descuento: $", totalConDescuento
+    FinSi
+FinProceso
