@@ -1,0 +1,23 @@
+Proceso Asistente_IMC
+    Definir peso, altura, imc Como Real
+
+    Escribir "Ingrese su peso en kilogramos: "
+    Leer peso
+    Escribir "Ingrese su altura en metros: "
+    Leer altura
+
+    imc <- peso / (altura * altura)
+
+    Escribir "Su IMC es: ", imc
+
+    Segun Verdadero Hacer
+        imc < 18.5:
+            Escribir "Categoría: Bajo peso"
+        imc >= 18.5 Y imc < 24.9:
+            Escribir "Categoría: Peso normal"
+        imc >= 24.9 Y imc < 29.9:
+            Escribir "Categoría: Sobrepeso"
+        imc >= 29.9:
+            Escribir "Categoría: Obesidad"
+    FinSegun
+FinProceso
