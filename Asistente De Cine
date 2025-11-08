@@ -1,0 +1,17 @@
+Proceso Asistente_Cine
+    Definir edad Como Entero
+
+    Escribir "Ingrese su edad: "
+    Leer edad
+
+    Segun Verdadero Hacer
+        edad < 7:
+            Escribir "Recomendación: Películas animadas y educativas aptas para todas las edades."
+        edad >= 7 Y edad <= 17:
+            Escribir "Recomendación: Películas familiares, aventuras y comedias."
+        edad >= 18 Y edad <= 30:
+            Escribir "Recomendación: Acción, drama, comedia y ciencia ficción."
+        edad > 30:
+            Escribir "Recomendación: Películas clásicas y dramas."
+    FinSegun
+FinProceso
