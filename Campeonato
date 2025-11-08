@@ -1,0 +1,22 @@
+Proceso Campeonato_Deportivo
+    Definir resultado Como Caracter
+    Definir puntos Como Entero
+
+    Escribir "Ingrese el resultado del partido (ganado, empatado o perdido): "
+    Leer resultado
+
+    Segun resultado Hacer
+        "ganado":
+            puntos <- 3
+        "empatado":
+            puntos <- 1
+        "perdido":
+            puntos <- 0
+        De Otro Modo:
+            Escribir "Resultado no válido."
+            FinSegun
+            FinProceso
+    FinSegun
+
+    Escribir "Puntos obtenidos: ", puntos
+FinProceso
